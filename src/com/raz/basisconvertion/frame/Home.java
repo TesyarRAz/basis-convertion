@@ -33,8 +33,8 @@ public class Home extends javax.swing.JFrame {
         
         initComponents();
         
-        comboFrom.setModel(new DefaultComboBoxModel<>(convertions.keySet().toArray(String[]::new)));
-        comboTo.setModel(new DefaultComboBoxModel<>(convertions.keySet().toArray(String[]::new)));
+        comboFrom.setModel(new DefaultComboBoxModel<>(convertions.keySet().toArray(new String[convertions.size()])));
+        comboTo.setModel(new DefaultComboBoxModel<>(convertions.keySet().toArray(new String[convertions.size()])));
         
         setLocationRelativeTo(null);
     }

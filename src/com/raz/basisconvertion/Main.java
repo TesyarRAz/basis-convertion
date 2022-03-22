@@ -5,6 +5,8 @@
 package com.raz.basisconvertion;
 
 import com.raz.basisconvertion.frame.Home;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javax.swing.UIManager;
 
@@ -19,8 +21,12 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
+            ArrayList<String> rec = new ArrayList<>();
+            rec.add("windows");
+            rec.add("gtk+");
+            
             for (UIManager.LookAndFeelInfo lookAndFeel : UIManager.getInstalledLookAndFeels()) {
-                if (List.of("windows", "gtk+").contains(lookAndFeel.getName().toLowerCase())) {
+                if (rec.contains(lookAndFeel.getName().toLowerCase())) {
                     UIManager.setLookAndFeel(lookAndFeel.getClassName());
                     break;
                 }
