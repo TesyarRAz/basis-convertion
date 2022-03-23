@@ -22,7 +22,7 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
     - name: Build with Ant
-      run: ant -dplatforms.JDK_17.home=$JAVA_HOME -noinput -buildfile build.xml
+      run: ant -Dplatforms.JDK_17.home="$JAVA_HOME" -noinput -buildfile build.xml
     - uses: actions/upload-artifact@v3
       with:
         name: Package
